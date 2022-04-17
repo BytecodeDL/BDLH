@@ -1,0 +1,63 @@
+{
+  parserClass="com.github.ceclin.bdlh.lang.BDLParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="BDL"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.github.ceclin.bdlh.lang"
+  psiImplPackage="com.github.ceclin.bdlh.lang"
+
+  elementTypeHolderClass="com.github.ceclin.bdlh.lang.BDLTypes"
+  elementTypeClass="com.github.ceclin.bdlh.lang.BDLElementType"
+  tokenTypeClass="com.github.ceclin.bdlh.lang.BDLTokenType"
+
+  psiImplUtilClass="com.github.ceclin.bdlh.lang.ImplExtKt"
+
+  tokens=[
+    LA='<'
+    RA='>'
+    LS='['
+    RS=']'
+    LP='('
+    RP=')'
+    DOT='.'
+    SPACE=' '
+    DOLLAR='$'
+    COLON=':'
+    COMMA=','
+    id='regexp:\p{Alpha}\w*'
+    any='regexp:.|\R'
+  ]
+}
+
+root ::= (signature|fallback)*
+
+private fallback ::= LA | RA | LS | RS | LP | RP | DOT | SPACE | DOLLAR | COLON | COMMA | id | any
+
+signature ::= LA class_name COLON SPACE (method|field) RA
+    {methods=[getReference]}
+
+class_name ::= type_name
+
+return_type ::= type_name
+
+field ::= field_type SPACE field_name
+
+field_type ::= type_name
+
+field_name ::= identifier
+
+method ::= return_type SPACE method_name LP parameter? RP
+
+method_name ::= identifier | LA identifier RA
+
+parameter ::= parameter_type (COMMA parameter_type)*
+
+parameter_type ::= type_name
+
+private type_name ::= id (DOT id)* (DOLLAR id)? array_suffix*
+
+private array_suffix ::= LS RS
+
+private identifier ::= id

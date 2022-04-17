@@ -5,10 +5,22 @@
     <vendor>ceclin</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.ceclin.bdlh.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.ceclin.bdlh.services.MyProjectService"/>
+        <fileType name="BDL"
+                  implementationClass="com.github.ceclin.bdlh.lang.BDLFileType"
+                  fieldName="INSTANCE"
+                  language="bdl"
+                  extensions="bdl"/>
+        <lang.parserDefinition
+                language="bdl"
+                implementationClass="com.github.ceclin.bdlh.lang.BDLParserDefinition"/>
+        <annotator
+                language="bdl"
+                implementationClass="com.github.ceclin.bdlh.lang.BDLAnnotator"/>
     </extensions>
 
     <applicationListeners>
