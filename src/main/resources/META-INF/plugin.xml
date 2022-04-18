@@ -8,8 +8,6 @@
     <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.ceclin.bdlh.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.ceclin.bdlh.services.MyProjectService"/>
         <fileType name="BDL"
                   implementationClass="com.github.ceclin.bdlh.lang.BDLFileType"
                   fieldName="INSTANCE"
@@ -22,9 +20,4 @@
                 language="bdl"
                 implementationClass="com.github.ceclin.bdlh.lang.BDLAnnotator"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.ceclin.bdlh.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
