@@ -8,10 +8,10 @@
 [BytecodeDL](https://github.com/BytecodeDL/ByteCodeDL) Helper
 
 Features:
-- Partial **highlighting** and **navigation** for method and field signature in BytecodeDL output.
+- Partial **highlighting** and **navigation** for field, method and class signature in BytecodeDL output.
 
 Tips:
-- You can rename `*.facts` and `*.csv` that contains method and field signature to `*.bdl` or just override file type.
+- You can rename `*.facts` and `*.csv` that contains symbol signature to `*.bdl` or just override file type.
 <!-- Plugin description end -->
 
 ## Installation
