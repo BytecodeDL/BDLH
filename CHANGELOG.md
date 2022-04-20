@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Changed
+- Update pluginIcon.svg
 
 ## [0.1.0]
 ### Added
