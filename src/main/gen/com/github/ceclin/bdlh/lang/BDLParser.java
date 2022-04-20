@@ -279,7 +279,7 @@ public class BDLParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // id (DOT id)* (DOLLAR id)? array_suffix*
+  // id (DOT id)* (DOLLAR id)* array_suffix*
   static boolean type_name(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "type_name")) return false;
     if (!nextTokenIs(b, ID)) return false;
@@ -314,10 +314,14 @@ public class BDLParser implements PsiParser, LightPsiParser {
     return r;
   }
 
-  // (DOLLAR id)?
+  // (DOLLAR id)*
   private static boolean type_name_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "type_name_2")) return false;
-    type_name_2_0(b, l + 1);
+    while (true) {
+      int c = current_position_(b);
+      if (!type_name_2_0(b, l + 1)) break;
+      if (!empty_element_parsed_guard_(b, "type_name_2", c)) break;
+    }
     return true;
   }
 

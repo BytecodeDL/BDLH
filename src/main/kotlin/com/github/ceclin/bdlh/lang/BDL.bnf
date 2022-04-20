@@ -26,7 +26,7 @@
     DOLLAR='$'
     COLON=':'
     COMMA=','
-    id='regexp:\p{Alpha}\w*'
+    id='regexp:\w+'
     any='regexp:.|\R'
   ]
 }
@@ -56,7 +56,7 @@ parameter ::= parameter_type (COMMA parameter_type)*
 
 parameter_type ::= type_name
 
-private type_name ::= id (DOT id)* (DOLLAR id)? array_suffix*
+private type_name ::= id (DOT id)* (DOLLAR id)* array_suffix*
 
 private array_suffix ::= LS RS
 

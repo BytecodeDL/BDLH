@@ -22,7 +22,7 @@ import static com.github.ceclin.bdlh.lang.BDLTypes.*;
 %type IElementType
 %unicode
 
-ID=[:letter:][a-zA-Z_0-9]*
+ID=[a-zA-Z_0-9]+
 ANY=.|\R
 
 %%
