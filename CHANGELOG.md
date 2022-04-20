@@ -3,11 +3,15 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Added
+- Navigation for class signature
+
 ### Changed
 - Update pluginIcon.svg
 
 ### Fixed
 - Subclasses resolving
+- Method navigation behavior
 
 ## [0.1.0]
 ### Added

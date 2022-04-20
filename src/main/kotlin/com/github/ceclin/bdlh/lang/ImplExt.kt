@@ -15,7 +15,7 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
         }
 
         private fun resolveMethod(clazz: PsiClass, method: BDLMethod): PsiMethod? {
-            clazz.findMethodsByName(method.methodName.text, false).firstOrNull {
+            return clazz.findMethodsByName(method.methodName.text, false).firstOrNull {
                 val parameter = method.parameter
                 if (parameter == null)
                     it.hasParameters()
@@ -26,7 +26,6 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
                     } == parameter.text
                 }
             }
-            return clazz.findMethodsByName(method.methodName.text, false).firstOrNull()
         }
     }
 
@@ -36,8 +35,9 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
         // I don't know what jvmCompatible means. No document for this param.
         val clazz = ClassUtil.findPsiClass(PsiManager.getInstance(project), className, null, true)
             ?: return null
-        return element.field?.let { resolveField(clazz, it) }
-            ?: element.method?.let { resolveMethod(clazz, it) }
+        element.field?.let { return resolveField(clazz, it) }
+        element.method?.let { return resolveMethod(clazz, it) }
+        return clazz
     }
 }
 

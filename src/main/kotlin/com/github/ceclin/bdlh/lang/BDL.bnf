@@ -35,7 +35,7 @@ root ::= (signature|fallback)*
 
 private fallback ::= LA | RA | LS | RS | LP | RP | DOT | SPACE | DOLLAR | COLON | COMMA | id | any
 
-signature ::= LA class_name COLON SPACE (method|field) RA
+signature ::= LA class_name (COLON SPACE (method|field))? RA
     {methods=[getReference]}
 
 class_name ::= type_name

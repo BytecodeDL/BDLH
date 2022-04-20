@@ -254,7 +254,7 @@ public class BDLParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // LA class_name COLON SPACE (method|field) RA
+  // LA class_name (COLON SPACE (method|field))? RA
   public static boolean signature(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "signature")) return false;
     if (!nextTokenIs(b, LA)) return false;
@@ -262,16 +262,33 @@ public class BDLParser implements PsiParser, LightPsiParser {
     Marker m = enter_section_(b);
     r = consumeToken(b, LA);
     r = r && class_name(b, l + 1);
-    r = r && consumeTokens(b, 0, COLON, SPACE);
-    r = r && signature_4(b, l + 1);
+    r = r && signature_2(b, l + 1);
     r = r && consumeToken(b, RA);
     exit_section_(b, m, SIGNATURE, r);
     return r;
   }
 
+  // (COLON SPACE (method|field))?
+  private static boolean signature_2(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "signature_2")) return false;
+    signature_2_0(b, l + 1);
+    return true;
+  }
+
+  // COLON SPACE (method|field)
+  private static boolean signature_2_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "signature_2_0")) return false;
+    boolean r;
+    Marker m = enter_section_(b);
+    r = consumeTokens(b, 0, COLON, SPACE);
+    r = r && signature_2_0_2(b, l + 1);
+    exit_section_(b, m, null, r);
+    return r;
+  }
+
   // method|field
-  private static boolean signature_4(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "signature_4")) return false;
+  private static boolean signature_2_0_2(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "signature_2_0_2")) return false;
     boolean r;
     r = method(b, l + 1);
     if (!r) r = field(b, l + 1);
