@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Fixed
+- Method navigation behavior
 
 ## [0.2.0]
 ### Added

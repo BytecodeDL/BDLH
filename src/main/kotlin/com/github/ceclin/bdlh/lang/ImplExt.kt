@@ -18,7 +18,7 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
             return clazz.findMethodsByName(method.methodName.text, false).firstOrNull {
                 val parameter = method.parameter
                 if (parameter == null)
-                    it.hasParameters()
+                    !it.hasParameters()
                 else {
                     it.parameterList.parameters.joinToString(",") { p ->
                         val type = p.type
