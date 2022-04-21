@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Fixed
+- Class constructor resolving
 
 ## [0.2.1]
 ### Fixed

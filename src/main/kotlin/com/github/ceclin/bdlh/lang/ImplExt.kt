@@ -15,7 +15,8 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
         }
 
         private fun resolveMethod(clazz: PsiClass, method: BDLMethod): PsiMethod? {
-            return clazz.findMethodsByName(method.methodName.text, false).firstOrNull {
+            val methodName = method.methodName.text.takeUnless { it == "<init>" } ?: clazz.name
+            return clazz.findMethodsByName(methodName, false).firstOrNull {
                 val parameter = method.parameter
                 if (parameter == null)
                     !it.hasParameters()
