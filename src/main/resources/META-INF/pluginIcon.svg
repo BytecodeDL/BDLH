@@ -1,1 +1,37 @@
-<svg width="197" height="198" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs><clipPath id="clip0"><rect x="435" y="297" width="197" height="198"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-435 -297)"><rect x="452" y="314" width="165" height="165" stroke="#000000" stroke-width="27.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="8" stroke-opacity="1" fill="#000000" fill-opacity="1"/><text fill="#FFFFFF" fill-opacity="1" font-family="Consolas,Consolas_MSFontService,sans-serif" font-style="normal" font-variant="normal" font-weight="700" font-stretch="normal" font-size="41" text-anchor="start" direction="ltr" writing-mode="lr-tb" unicode-bidi="normal" text-decoration="none" transform="matrix(1 0 0 1 497.667 403)">BDL</text></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="297mm" height="420mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 29700 42000"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="图层_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="9418.42" y="15574.76" width="10862.07" height="10862.07"/>
+  <g id="_2806338363008">
+   <path class="fil1" d="M13850.54 22171.57l1349.4 4.18 135.87 -1228.83c-87.21,-34.93 91.25,44.76 -71.92,-17.92l-112.06 -53.24c82.12,-255.39 238.93,-590.99 215.84,-866.63l-1278.06 0.05 -239.07 2162.39zm277.42 -239.24l855.4 -2.46 76.06 -758.34 -850.88 0.12 -80.58 760.68zm104.43 -1006.29l662.42 0.01 206.8 -650.91 -800.98 -3.43 -68.24 654.33z"/>
+   <path class="fil1" d="M15528.51 22166.02c211.7,19.16 422.34,6.98 629.17,7.86 453.02,1.91 350.5,46.39 671.44,-272.8 82.6,-82.16 85.45,-62.29 107.72,-211.32l122.81 -1159.96c26.61,-259.95 -49.55,-235.87 -191.23,-400.29 -153.85,-178.52 -187.56,-121.3 -499.06,-120.12 -191.57,0.73 -426.48,-16.25 -610.72,9.17l-230.13 2147.46zm277.21 -236.58c927.16,29.39 846.37,49.83 938.19,-811.53 96.65,-906.6 206.39,-874.31 -753.78,-865.09l-184.41 1676.62z"/>
+   <path class="fil1" d="M17206.65 22173.93l1239.77 0.05 90.61 -241.62 -1048.98 -0.03c20.4,-466.57 227.04,-1556.39 176.39,-1923.36l-220.2 0.82 -237.59 2164.14z"/>
+   <path class="fil1 str0" d="M14986.93 17886.24c579.47,0 1121.91,158.19 1586.84,433.44 -18.74,19.97 -32.72,44.45 -40.16,71.63 -453.05,-268.61 -981.8,-422.98 -1546.68,-422.98 -1677.55,0 -3037.47,1359.92 -3037.47,3037.47 0,1677.55 1359.92,3037.47 3037.47,3037.47 543.04,0 1052.71,-142.64 1493.82,-392.31l-0.04 3.58c0,28.78 6.4,56.08 17.83,80.54 -447.79,248.6 -963.13,390.28 -1511.61,390.28 -1722.89,0 -3119.56,-1396.67 -3119.56,-3119.56 0,-1722.89 1396.67,-3119.56 3119.56,-3119.56z"/>
+   <circle class="fil1 str0" cx="12822.92" cy="18777.82" r="206.92"/>
+   <circle class="fil1 str0" cx="16698.19" cy="18436.42" r="170.62"/>
+   <circle class="fil1 str0" cx="12883.56" cy="23294.67" r="190.5"/>
+   <circle class="fil1 str0" cx="16671.2" cy="23654.54" r="190.5"/>
+   <polygon class="fil1 str0" points="12671.4,21058.3 12094.02,21235.66 11916.65,21813.04 11739.29,21235.66 11161.91,21058.3 11739.29,20880.93 11916.65,20303.55 12094.02,20880.93 "/>
+   <circle class="fil1 str0" cx="13510.32" cy="19592.95" r="154.11"/>
+   <circle class="fil1 str0" cx="14997.23" cy="19019.59" r="108.97"/>
+   <circle class="fil1 str0" cx="13505.75" cy="22545.92" r="141.92"/>
+   <circle class="fil1 str0" cx="15000.69" cy="23118.54" r="99.15"/>
+   <path class="fil1 str0" d="M14962.43 18973.03c566.57,0 1080.78,224.05 1459.01,588.29l-40.47 22.78 -14.94 0c-366.69,-344.95 -860.42,-556.38 -1403.6,-556.38 -1131.66,0 -2049.04,917.38 -2049.04,2049.04 0,1131.66 917.38,2049.04 2049.04,2049.04 542.51,0 1035.7,-210.91 1402.25,-555.11l49.84 28.04c-377.58,360.37 -888.93,581.76 -1452.09,581.76 -1161.86,0 -2103.73,-941.87 -2103.73,-2103.73 0,-1161.86 941.87,-2103.73 2103.73,-2103.73z"/>
+  </g>
+ </g>
+</svg>
