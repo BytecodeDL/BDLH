@@ -9,6 +9,7 @@
 
 Features:
 - Partial **highlighting** and **navigation** for field, method and class signature in BytecodeDL output.
+- Editor context menu action for copying signature of fields, methods and classes.
 
 Tips:
 - You can rename `*.facts` and `*.csv` that contains symbol signature to `*.bdl` or just override file type.
