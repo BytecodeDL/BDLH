@@ -3,6 +3,7 @@ package com.github.ceclin.bdlh.lang
 import com.intellij.openapi.util.TextRange
 import com.intellij.psi.*
 import com.intellij.psi.util.ClassUtil
+import com.intellij.psi.util.TypeConversionUtil
 
 fun getReference(bdlSignature: BDLSignature): PsiReference = RefToJava(bdlSignature)
 
@@ -22,7 +23,7 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
                     !it.hasParameters()
                 else {
                     it.parameterList.parameters.joinToString(",") { p ->
-                        val type = p.type
+                        val type = TypeConversionUtil.erasure(p.type)
                         type.deepComponentType.canonicalText + "[]".repeat(type.arrayDimensions)
                     } == parameter.text
                 }

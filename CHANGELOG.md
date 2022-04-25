@@ -3,6 +3,9 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Fixed
+- Support type erasure
+
 ### Changed
 - Change pluginIcon.svg
 
