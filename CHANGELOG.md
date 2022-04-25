@@ -3,6 +3,9 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Added
+- Editor context menu action for copying signature
+
 ### Fixed
 - Support type erasure
 

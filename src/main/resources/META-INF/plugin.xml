@@ -20,4 +20,13 @@
                 language="bdl"
                 implementationClass="com.github.ceclin.bdlh.lang.BDLAnnotator"/>
     </extensions>
+
+    <actions>
+        <action id="BDLH.CopySignatureAction"
+                class="com.github.ceclin.bdlh.action.CopySignatureAction"
+                text="BDLH: Copy Signature"
+                description="copy signature">
+            <add-to-group group-id="EditorPopupMenu2" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
