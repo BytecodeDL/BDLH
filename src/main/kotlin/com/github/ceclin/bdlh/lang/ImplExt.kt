@@ -1,9 +1,9 @@
 package com.github.ceclin.bdlh.lang
 
+import com.github.ceclin.bdlh.jvmCanonicalText
 import com.intellij.openapi.util.TextRange
 import com.intellij.psi.*
 import com.intellij.psi.util.ClassUtil
-import com.intellij.psi.util.TypeConversionUtil
 
 fun getReference(bdlSignature: BDLSignature): PsiReference = RefToJava(bdlSignature)
 
@@ -23,8 +23,7 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
                     !it.hasParameters()
                 else {
                     it.parameterList.parameters.joinToString(",") { p ->
-                        val type = TypeConversionUtil.erasure(p.type)
-                        type.deepComponentType.canonicalText + "[]".repeat(type.arrayDimensions)
+                        p.type.jvmCanonicalText.toString()
                     } == parameter.text
                 }
             }
@@ -34,8 +33,7 @@ class RefToJava(element: BDLSignature) : PsiReferenceBase<BDLSignature>(element,
     override fun resolve(): PsiElement? {
         val project = element.project
         val className = element.className.text
-        // I don't know what jvmCompatible means. No document for this param.
-        val clazz = ClassUtil.findPsiClass(PsiManager.getInstance(project), className, null, true)
+        val clazz = ClassUtil.findPsiClassByJVMName(PsiManager.getInstance(project), className)
             ?: return null
         element.field?.let { return resolveField(clazz, it) }
         element.method?.let { return resolveMethod(clazz, it) }
