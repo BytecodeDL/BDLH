@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+
+## [0.3.0]
 ### Added
 - Editor context menu action for copying signature
 
