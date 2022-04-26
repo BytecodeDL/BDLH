@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Fixed
+- Signature generation of constructor methods
 
 ## [0.3.0]
 ### Added

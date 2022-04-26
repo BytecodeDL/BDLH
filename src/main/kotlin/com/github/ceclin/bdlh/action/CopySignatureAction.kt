@@ -32,7 +32,9 @@ class CopySignatureAction : AnAction("BDLH: Copy Signature") {
         is PsiMethod -> {
             val clazz = containingClass?.let { PsiTypesUtil.getClassType(it).jvmCanonicalText }
             val params = parameterList.parameters.joinToString(",") { it.type.jvmCanonicalText.toString() }
-            "<$clazz: ${returnType?.jvmCanonicalText} $name($params)>"
+            val type = if (isConstructor) "void" else returnType?.jvmCanonicalText
+            val methodName = if (isConstructor) "<init>" else name
+            "<$clazz: $type $methodName($params)>"
         }
         is PsiField -> {
             val clazz = containingClass?.let { PsiTypesUtil.getClassType(it).jvmCanonicalText }
