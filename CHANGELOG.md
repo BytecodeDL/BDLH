@@ -3,6 +3,8 @@
 # BDLH Changelog
 
 ## [Unreleased]
+### Changed
+- Stay updated with IntelliJ Platform Plugin Template v1.2.0
 
 ## [0.3.1]
 ### Fixed
